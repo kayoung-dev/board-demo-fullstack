@@ -81,38 +81,33 @@ export default function BoardList() {
     <div className="board-list">
       <header className="board-list__header">
         <div className="board-list__header-left">
-          <h1 className="board-list__title">게시판</h1>
+          <Link to="/boards" className="board-list__title-link">
+            <h1 className="board-list__title">HanBoard</h1>
+          </Link>
           <nav className="board-list__nav">
             <span className="board-list__nav-item">메뉴1</span>
             <span className="board-list__nav-item">메뉴2</span>
             <span className="board-list__nav-item">메뉴3</span>
           </nav>
         </div>
-        <form className="board-list__search" onSubmit={handleSearch}>
-          <input
-            type="text"
-            className="board-list__search-input"
-            placeholder="제목 검색"
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-            aria-label="검색어"
-          />
-          <button type="submit" className="board-list__search-btn">
-            검색
-          </button>
-          {isSearching && (
-            <button
-              type="button"
-              className="board-list__search-clear"
-              onClick={() => {
-                setSearchInput("");
-                setSearchParams({});
-              }}
-            >
-              초기화
+        <div className="board-list__header-right">
+          <form className="board-list__search" onSubmit={handleSearch}>
+            <input
+              type="text"
+              className="board-list__search-input"
+              placeholder="제목 검색"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              aria-label="검색어"
+            />
+            <button type="submit" className="board-list__search-btn">
+              검색
             </button>
-          )}
-        </form>
+          </form>
+          <Link to="/boards/write" className="board-list__write-btn">
+            글쓰기
+          </Link>
+        </div>
       </header>
 
       {!hasContent ? (
@@ -126,11 +121,6 @@ export default function BoardList() {
             )}
             {totalPages > 0 && ` · ${currentPage + 1} / ${totalPages} 페이지`}
           </p>
-          <div className="board-list__footer">
-            <Link to="/boards/write" className="board-list__write-btn">
-              글쓰기
-            </Link>
-          </div>
         </>
       ) : (
         <>
@@ -193,11 +183,6 @@ export default function BoardList() {
             )}
             {totalPages > 0 && ` · ${currentPage + 1} / ${totalPages} 페이지`}
           </p>
-          <div className="board-list__footer">
-            <Link to="/boards/write" className="board-list__write-btn">
-              글쓰기
-            </Link>
-          </div>
         </>
       )}
     </div>

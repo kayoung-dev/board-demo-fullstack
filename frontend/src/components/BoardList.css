@@ -39,6 +39,16 @@
   flex-shrink: 0;
 }
 
+.board-list__title-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.board-list__title-link:hover .board-list__title {
+  color: #646cff;
+}
+
 .board-list__title {
   margin: 0;
   font-size: 1.75rem;
@@ -56,11 +66,18 @@
   cursor: default;
 }
 
+.board-list__header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
 .board-list__search {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-left: auto;
   min-width: 0;
 }
 
@@ -82,21 +99,9 @@
   border-color: #646cff;
 }
 
-.board-list__search-btn,
-.board-list__search-clear {
+.board-list__search-btn {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
-}
-
-.board-list__search-clear {
-  color: rgba(255, 255, 255, 0.7);
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.board-list__search-clear:hover {
-  color: #e57373;
-  border-color: rgba(229, 115, 115, 0.5);
 }
 
 .board-list__footer {
@@ -237,14 +242,8 @@
     border-color: #535bf2;
   }
 
-  .board-list__search-clear {
-    color: rgba(0, 0, 0, 0.6);
-    border-color: rgba(0, 0, 0, 0.15);
-  }
-
-  .board-list__search-clear:hover {
-    color: #c62828;
-    border-color: rgba(198, 40, 40, 0.4);
+  .board-list__title-link:hover .board-list__title {
+    color: #535bf2;
   }
 
   .board-list__row-link:hover {
