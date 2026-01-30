@@ -1,0 +1,155 @@
+.board-write {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  text-align: center;
+}
+
+.board-write--loading,
+.board-write--error {
+  text-align: center;
+  padding: 3rem;
+}
+
+.board-write--error {
+  color: #e57373;
+}
+
+.board-write__back {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  text-align: center;
+}
+
+.board-write__back:hover {
+  color: #646cff;
+}
+
+.board-write__title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+}
+
+.board-write__form {
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.board-write__error {
+  margin: 0 0 1rem 0;
+  padding: 0.75rem;
+  background: rgba(229, 115, 115, 0.15);
+  color: #e57373;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.board-write__field {
+  margin-bottom: 1.25rem;
+}
+
+.board-write__field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.board-write__field input,
+.board-write__field textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.board-write__field input:focus,
+.board-write__field textarea:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.board-write__field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.board-write__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.board-write__actions button {
+  padding: 0.6rem 1.25rem;
+}
+
+.board-write__cancel {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.board-write__cancel:hover {
+  color: #646cff;
+}
+
+@media (prefers-color-scheme: light) {
+  .board-write__back {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .board-write__back:hover {
+    color: #535bf2;
+  }
+
+  .board-write__form {
+    border-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .board-write__field label {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .board-write__field input,
+  .board-write__field textarea {
+    border-color: rgba(0, 0, 0, 0.15);
+    background: #fff;
+  }
+
+  .board-write__field input:focus,
+  .board-write__field textarea:focus {
+    border-color: #535bf2;
+  }
+
+  .board-write__actions {
+    border-top-color: rgba(0, 0, 0, 0.06);
+  }
+
+  .board-write__cancel {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .board-write__cancel:hover {
+    color: #535bf2;
+  }
+}
