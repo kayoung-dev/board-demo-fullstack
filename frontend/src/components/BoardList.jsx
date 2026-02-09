@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "./BoardList.css";
 
-const API_BASE = "/api";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "/api";
 
 export default function BoardList() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -68,7 +68,7 @@ export default function BoardList() {
     return (
       <div className="board-list board-list--error">
         <p>{error}</p>
-        <p className="board-list__hint">백엔드 서버(localhost:8080)가 실행 중인지 확인해 주세요.</p>
+        <p className="board-list__hint">백엔드 서버가 실행 중인지 확인해 주세요.</p>
       </div>
     );
   }

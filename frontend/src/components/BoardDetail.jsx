@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams, useLocation, useNavigate } from "react-router-dom";
 import "./BoardDetail.css";
 
-const API_BASE = "/api";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "/api";
 
 export default function BoardDetail() {
   const { id } = useParams();
