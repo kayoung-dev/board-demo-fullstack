@@ -1,0 +1,4 @@
+.idea/
+backend/docker-compose.yml
+
+.DS_Store
